@@ -11,13 +11,15 @@ else {
 
 let edad = prompt("¿Cuál es tu edad?");
 
-while (edad < 18) {
+while (edad <= 17 || (""))  {
     edad = prompt("Para ingresar, debes ser mayor de edad.");
-    
-    if (edad > 18) {
-        alert("¡Bienvenido/a a Kinkon Bebidas S.A.!");
-    }
 }
+
+if (edad >= 18) {
+    alert("¡Bienvenido/a a Kinkon Bebidas S.A.!");
+}
+
+
 
 
 
