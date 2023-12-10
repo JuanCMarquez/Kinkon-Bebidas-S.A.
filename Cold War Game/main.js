@@ -6,20 +6,19 @@ if (nombre === "") {
 }
 
 else {
-    alert(`¡Bienvenido/a, ${nombre}!`);
+    alert(`¡Bienvenido, ${nombre}!`);
 }
 
 let edad = prompt("¿Cuál es tu edad?");
 
-while (edad < 18) {
-    edad = prompt("Para ingresar, debes ser mayor de edad.");
-    
-    if (edad > 18) {
-        alert("¡Bienvenido/a a Kinkon Bebidas S.A.!");
-    }
+if (edad > 18) {
+    alert("¡Bienvenido a Kinkon Bebidas S.A.!");
 }
 
-
+while (edad < 18) {
+    edad = prompt("Para ingresar, debes ser mayor de edad.");
+    alert("¡Bienvenido a Kinkon Bebidas S.A.!");
+}
 
 
 
