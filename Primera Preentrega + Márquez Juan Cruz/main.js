@@ -1,7 +1,7 @@
 let nombre = prompt("Ingrese su nombre");
 
 
-while (nombre === "") {
+while (nombre === "" || nombre === null) {
     nombre = prompt("¡Debes colocar tu nombre!");
 }
 
