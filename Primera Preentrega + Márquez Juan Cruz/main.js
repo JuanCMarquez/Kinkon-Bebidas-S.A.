@@ -11,7 +11,7 @@ if (nombre === nombre) {
 
 let edad = prompt("¿Cuál es tu edad?");
 
-while (edad === "") {
+while (edad === "" || edad === null) {
     edad = prompt("¡Debes colocar tu edad!");
 }
 
