@@ -47,22 +47,48 @@ let bebidasAlcoholicas = [
 
 ];
 
-function obtenerPropiedades(arr, propiedad) {
-    return arr.map(function (bebida) {
-        return bebida[propiedad];
+function obtenerPropiedades(arr, propiedad, valor) {
+    return arr.find(function (bebida) {
+        return bebida[propiedad] === valor;
     });
 }
 
- 
-    let nombreBebidas = prompt("Escriba el tipo de su bebida alcohólica favorita.");
+/*do {
+    let nombreBebida = prompt("Escriba el nombre de su bebida alcohólica favorita.");
 
-    const resultados = bebidasAlcoholicas.map(bebidasAlcoholicas => {
-        if (bebidasAlcoholicas.hasOwnProperty(nombre)) {
-            alert (`Contamos con los siugientes productos:${bebidasAlcoholicas.nombre}: ${bebidasAlcoholicas[propiedad]}`);
-        } else {
-            alert (`¡Debes elegir tu tipo de bebida favorita!`);
-        }
-    });
+    if (nombreBebida.toLowerCase() === 'salir') {
+        break; 
+    }
 
-    
+    const bebidaEncontrada = obtenerPropiedades(bebidasAlcoholicas, 'nombre', nombreBebida);
+
+    if (bebidaEncontrada) {
+        alert(`Contamos con ${bebidaEncontrada.nombre}: Tipo: ${bebidaEncontrada.tipo}, Porcentaje de Alcohol: ${bebidaEncontrada.porcentajeAlcohol}%, Precio: $${bebidaEncontrada.precio}`);
+    } else {
+        alert("¡Debes elegir tu tipo de bebida favorita!");
+    }
+} while (true);*/
+
+do {
+    let nombreBebida = prompt("Escriba el nombre de tu bebida alcohólica favorita.");
+
+    // Manejo de cancelación o entrada vacía
+    if (nombreBebida === null || nombreBebida.trim() === '') {
+        alert("¡Debes elegir tu tipo de bebida favorita!");
+        continue; // Vuelve al inicio del bucle
+    }
+
+    if (nombreBebida.toLowerCase() === 'salir') {
+        break;
+    }
+
+    const bebidaEncontrada = obtenerPropiedades(bebidasAlcoholicas, 'nombre', nombreBebida);
+
+    if (bebidaEncontrada) {
+        alert(`Contamos con ${bebidaEncontrada.nombre}: Tipo: ${bebidaEncontrada.tipo}, Porcentaje de Alcohol: ${bebidaEncontrada.porcentajeAlcohol}%, Precio: $${bebidaEncontrada.precio}`);
+    } else {
+        alert(`Lo siento, no encontramos información sobre ${nombreBebida}.`);
+    }
+} while (true);
+
 
