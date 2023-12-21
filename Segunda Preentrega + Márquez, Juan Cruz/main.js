@@ -53,6 +53,16 @@ function obtenerPropiedades(arr, propiedad) {
     });
 }
 
-let nombresDeBebidas = bebidasAlcoholicas.map(bebida => bebida.nombre);
-alert (`Estos son los nombres de las bebidas: ${nombresDeBebidas}`);
+ 
+    let nombreBebidas = prompt("Escriba el tipo de su bebida alcohólica favorita.");
+
+    const resultados = bebidasAlcoholicas.map(bebidasAlcoholicas => {
+        if (bebidasAlcoholicas.hasOwnProperty(nombre)) {
+            alert (`Contamos con los siugientes productos:${bebidasAlcoholicas.nombre}: ${bebidasAlcoholicas[propiedad]}`);
+        } else {
+            alert (`¡Debes elegir tu tipo de bebida favorita!`);
+        }
+    });
+
+    
 
