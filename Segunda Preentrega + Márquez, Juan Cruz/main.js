@@ -27,68 +27,79 @@ if (!isNaN(edad)) {
 
 let bebidasAlcoholicas = [
     {
-        nombre: "Cerveza",
+        tipodebebida: "Cerveza",
+        nombre: "Temple Cósmica",
         tipo: "Lager",
         porcentajeAlcohol: 5.0,
-        precio: 2.99
+        precio: 1500
     },
     {
-        nombre: "Vino tinto",
-        tipo: "Cabernet Sauvignon",
+        tipodebebida: "Cerveza",
+        nombre: "Temple Scottish",
+        tipo: "Lager",
+        porcentajeAlcohol: 5.0,
+        precio: 1500
+    },
+    {
+        tipodebebida: "Cerveza",
+        nombre: "Temple Wolf Ipa",
+        tipo: "Lager",
+        porcentajeAlcohol: 5.0,
+        precio: 1500
+    },
+    {
+        tipodebebida: "Cerveza",
+        nombre: "Temple Honey",
+        tipo: "Lager",
+        porcentajeAlcohol: 5.0,
+        precio: 1500
+    },
+    {
+        tipodebebida: "Vino tinto",
+        nombre: "Trapiche Reserva",
+        tipo: "Malbec",
         porcentajeAlcohol: 13.5,
         precio: 14.99
     },
     {
-        nombre: "Whisky",
-        tipo: "Single Malt",
+        tipodebebida: "Whisky",
+        nombre: "Ballantine's Finest",
+        tipo: "Blend Scotch Whisky",
         porcentajeAlcohol: 40.0,
         precio: 49.99
-    },
-
+    }
 ];
 
-function obtenerPropiedades(arr, propiedad, valor) {
-    return arr.find(function (bebida) {
-        return bebida[propiedad] === valor;
-    });
+function buscarBebidasPorTipo(arr, tipo) {
+    const resultados = arr.filter(bebida => bebida.tipodebebida.toLowerCase().includes(tipo.toLowerCase()));
+    return resultados.sort((a, b) => a.nombre.localeCompare(b.nombre));
 }
 
-/*do {
-    let nombreBebida = prompt("Escriba el nombre de su bebida alcohólica favorita.");
-
-    if (nombreBebida.toLowerCase() === 'salir') {
-        break; 
-    }
-
-    const bebidaEncontrada = obtenerPropiedades(bebidasAlcoholicas, 'nombre', nombreBebida);
-
-    if (bebidaEncontrada) {
-        alert(`Contamos con ${bebidaEncontrada.nombre}: Tipo: ${bebidaEncontrada.tipo}, Porcentaje de Alcohol: ${bebidaEncontrada.porcentajeAlcohol}%, Precio: $${bebidaEncontrada.precio}`);
-    } else {
-        alert("¡Debes elegir tu tipo de bebida favorita!");
-    }
-} while (true);*/
-
 do {
-    let nombreBebida = prompt("Escriba el nombre de tu bebida alcohólica favorita.");
+    let tipoBebida = prompt("Escribe el tipo de bebida alcohólica que estás buscando.");
 
-    // Manejo de cancelación o entrada vacía
-    if (nombreBebida === null || nombreBebida.trim() === '') {
-        alert("¡Debes elegir tu tipo de bebida favorita!");
-        continue; // Vuelve al inicio del bucle
-    }
-
-    if (nombreBebida.toLowerCase() === 'salir') {
+    if (tipoBebida === null) {
+        alert("¡Gracias por su visita a KinKon Bebidas S.A!");
         break;
     }
 
-    const bebidaEncontrada = obtenerPropiedades(bebidasAlcoholicas, 'nombre', nombreBebida);
+    if (tipoBebida.trim() === '') {
+        alert("¡Debes elegir un tipo de bebida!");
+        continue;
+    }
 
-    if (bebidaEncontrada) {
-        alert(`Contamos con ${bebidaEncontrada.nombre}: Tipo: ${bebidaEncontrada.tipo}, Porcentaje de Alcohol: ${bebidaEncontrada.porcentajeAlcohol}%, Precio: $${bebidaEncontrada.precio}`);
+    if (tipoBebida.toLowerCase() === 'salir') {
+        break;
+    }
+
+    const bebidasEncontradas = buscarBebidasPorTipo(bebidasAlcoholicas, tipoBebida);
+
+    if (bebidasEncontradas.length > 0) {
+        alert("Contamos con las siguientes bebidas alcohólicas:");
+        bebidasEncontradas.forEach(bebida => {
+            alert(`Tipo de Bebida: ${bebida.tipodebebida}, Nombre: ${bebida.nombre}, Tipo: ${bebida.tipo}, Porcentaje de Alcohol: ${bebida.porcentajeAlcohol}%, Precio: $${bebida.precio}`);
+        });
     } else {
-        alert(`Lo siento, no encontramos información sobre ${nombreBebida}.`);
+        alert(`Lo siento, no encontramos información sobre bebidas alcohólicas del tipo ${tipoBebida}.`);
     }
 } while (true);
-
-
