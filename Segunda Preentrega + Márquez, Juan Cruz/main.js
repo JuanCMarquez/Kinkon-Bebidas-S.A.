@@ -28,46 +28,100 @@ if (!isNaN(edad)) {
 let bebidasAlcoholicas = [
     {
         tipodebebida: "Cerveza",
-        nombre: "Temple Cósmica",
-        tipo: "Lager",
-        porcentajeAlcohol: 5.0,
-        precio: 1500
-    },
-    {
-        tipodebebida: "Cerveza",
         nombre: "Temple Scottish",
-        tipo: "Lager",
-        porcentajeAlcohol: 5.0,
+        tipo: "Scottish Ale",
+        porcentajeAlcohol: 5.5,
+        contenido: "473 ml,",
         precio: 1500
     },
     {
         tipodebebida: "Cerveza",
         nombre: "Temple Wolf Ipa",
-        tipo: "Lager",
-        porcentajeAlcohol: 5.0,
+        tipo: "India Pale Ale",
+        porcentajeAlcohol: 5.8,
+        contenido: "473 ml,",
         precio: 1500
     },
     {
         tipodebebida: "Cerveza",
         nombre: "Temple Honey",
-        tipo: "Lager",
-        porcentajeAlcohol: 5.0,
+        tipo: "Honey",
+        porcentajeAlcohol: 4.5,
+        contenido: "473 ml,",
         precio: 1500
     },
     {
         tipodebebida: "Vino tinto",
         nombre: "Trapiche Reserva",
         tipo: "Malbec",
+        porcentajeAlcohol: 14.5,
+        contenido: "750 ml,",
+        precio: 3700
+    },
+    {
+        tipodebebida: "Vino tinto",
+        nombre: "Cafayate Reserva",
+        tipo: "Malbec",
+        porcentajeAlcohol: 14.3,
+        contenido: "750 ml,",
+        precio: 2800
+    },
+    {
+        tipodebebida: "Vino tinto",
+        nombre: "Casillero del Diablo",
+        tipo: "Malbec",
         porcentajeAlcohol: 13.5,
-        precio: 14.99
+        contenido: "750 ml,",
+        precio: 3700
     },
     {
         tipodebebida: "Whisky",
         nombre: "Ballantine's Finest",
         tipo: "Blend Scotch Whisky",
         porcentajeAlcohol: 40.0,
-        precio: 49.99
-    }
+        contenido: "750 ml,",
+        precio: 14000
+    },
+    {
+        tipodebebida: "Whisky",
+        nombre: "Johnnie Walker Red Label",
+        tipo: "Blend Scotch Whisky",
+        porcentajeAlcohol: 40.0,
+        contenido: "750 ml,",
+        precio: 14000
+    },
+    {
+        tipodebebida: "Whisky",
+        nombre: "Johnnie Walker Black Label",
+        tipo: "Blend Scotch Whisky",
+        porcentajeAlcohol: 40.0,
+        contenido: "750 ml,",
+        precio: 25000
+    },
+    {
+        tipodebebida: "Whisky",
+        nombre: "J&B",
+        tipo: "Blend Scotch Whisky",
+        porcentajeAlcohol: 40.0,
+        contenido: "750 ml,",
+        precio: 8000
+    },
+    {
+        tipodebebida: "Whisky",
+        nombre: "Old Smuggler",
+        tipo: "Whisky Nacional",
+        porcentajeAlcohol: 40.0,
+        contenido: "750 ml,",
+        precio: 6000
+    },
+    {
+        tipodebebida: "Whisky",
+        nombre: "Blenders",
+        tipo: "Whisky Nacional",
+        porcentajeAlcohol: 40.0,
+        contenido: "750 ml,",
+        precio: 5000
+    },
 ];
 
 function buscarBebidasPorTipo(arr, tipo) {
@@ -97,7 +151,7 @@ do {
     if (bebidasEncontradas.length > 0) {
         alert("Contamos con las siguientes bebidas alcohólicas:");
         bebidasEncontradas.forEach(bebida => {
-            alert(`Tipo de Bebida: ${bebida.tipodebebida}, Nombre: ${bebida.nombre}, Tipo: ${bebida.tipo}, Porcentaje de Alcohol: ${bebida.porcentajeAlcohol}%, Precio: $${bebida.precio}`);
+            alert(`Nombre: ${bebida.nombre}, Tipo: ${bebida.tipo}, Porcentaje de Alcohol: ${bebida.porcentajeAlcohol}%, Contenido: ${bebida.contenido} Precio: $${bebida.precio}`);
         });
     } else {
         alert(`Lo siento, no encontramos información sobre bebidas alcohólicas del tipo ${tipoBebida}.`);
