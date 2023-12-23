@@ -129,6 +129,8 @@ function buscarBebidasPorTipo(arr, tipo) {
     return resultados.sort((a, b) => a.nombre.localeCompare(b.nombre));
 }
 
+/*Acá me ayudó Chat-GPT y me gustaría que, por favor, me expliques bien la lógica de la función en la devolución */
+
 do {
     let tipoBebida = prompt("Escribe el tipo de bebida alcohólica que estás buscando.");
 
