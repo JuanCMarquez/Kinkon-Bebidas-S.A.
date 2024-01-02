@@ -11,19 +11,12 @@ if (nombre === nombre) {
 
 let edad = prompt("¿Cuál es tu edad?");
 
-while (edad === "" || edad === null) {
-    edad = prompt("¡Debes colocar tu edad!");
+while (edad === "" || isNaN(edad) || !(edad >= 18 && edad <= 120)) {
+    alert("Debes ingresar una edad válida para tener acceso a Kinkon Bebidas S.A.");
+    edad = prompt("¿Cuál es tu edad?");
 }
 
-if (!isNaN(edad)) {
-    if (edad >= 18 && edad <= 120) {
-        alert("¡Bienvenido/a a Kinkon Bebidas S.A.!");
-    } else {
-        alert("Debes ingresar una edad válida para tener acceso a Kinkon Bebidas S.A.");
-    }
-} else {
-    alert("Debes ingresar un número válido para la edad.");
-}
+alert("¡Felicitaciones, usted introdujo una edad válida para seleccionar su bebida alcohólica favorita!");
 
 let bebidasAlcoholicas = [
     {
