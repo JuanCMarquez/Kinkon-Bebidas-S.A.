@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kin Kon Bebidas S.A.</title>
+</head>
+
+<body>
+    <div id="age-verification">
+        <h1>Kin Kon Bebidas S.A.</h1>
+        <p>Por favor, confirma que eres mayor de edad para comprar bebidas alcohólicas:</p>
+        <button onclick="confirmAge()">Sí, soy mayor de edad</button>
+    </div>
+
+    <nav id="main-nav" style="display: none;">
+        <ul>
+            <li><a href="#" onclick="loadHome()">Inicio</a></li>
+            <li><a href="#" onclick="loadProducts()">Productos</a></li>
+            <li><a href="#" onclick="loadCart()">Carrito</a></li>
+            <!-- Puedes agregar más elementos según sea necesario -->
+        </ul>
+    </nav>
+
+    <section id="content">
+        <!-- Aquí se mostrarán los productos o el contenido del carrito -->
+    </section>
+
+    <script src="inicio.js"></script>
+    <script src="productos.js"></script>
+    <script src="carrito.js"></script>
+
+
+</body>
+
+</html>

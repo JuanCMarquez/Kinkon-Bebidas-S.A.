@@ -1,6 +1,5 @@
 let nombre = prompt("Ingrese su nombre");
 
-
 while (nombre === "" || nombre === null) {
     nombre = prompt("¡Debes colocar tu nombre!");
 }
@@ -10,6 +9,8 @@ if (nombre === nombre) {
 }
 
 let edad = prompt("¿Cuál es tu edad?");
+
+/*let cancelar = null*/
 
 while (edad === "" || isNaN(edad) || !(edad >= 18 && edad <= 120)) {
     alert("Debes ingresar una edad válida para tener acceso a Kinkon Bebidas S.A.");
