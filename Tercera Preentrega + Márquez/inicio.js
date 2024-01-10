@@ -1,3 +1,8 @@
+function playAudio() {
+    var audio = document.getElementById('sonidoMono');
+    audio.play();
+}
+
 // Función para confirmar la edad
 function confirmAge() {
     const isAdult = confirm("¿Eres mayor de edad?");
@@ -18,6 +23,22 @@ function confirmAge() {
     }
 }
 
+function confirmAge() {
+    // Reproducir audio
+    playAudio();
+
+    // Ocultar la sección de verificación de edad
+    var ageVerificationSection = document.getElementById('age-verification');
+    ageVerificationSection.style.display = 'none';
+
+    // Mostrar la barra de navegación y el contenido verificado
+    var navBar = document.getElementById('main-nav');
+    var verifiedContent = document.getElementById('age-verified-content');
+
+    navBar.style.display = 'block';
+    verifiedContent.style.display = 'block';
+}
+
 // Función para cargar la página de inicio
 function loadHome() {
     document.getElementById("content").innerHTML = "<h2>Bienvenido a la Tienda de Bebidas Alcohólicas</h2><p>Aquí encontrarás una selección de bebidas de alta calidad.</p>";
@@ -34,7 +55,7 @@ function loadCart() {
 }
 
 // Verificar si el usuario ya confirmó ser mayor de edad al cargar la página
-window.onload = function() {
+window.onload = function () {
     const isAdult = localStorage.getItem("isAdult");
 
     if (isAdult === "true") {

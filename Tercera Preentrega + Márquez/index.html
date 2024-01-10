@@ -5,34 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Kin Kon Bebidas S.A.</title>
 </head>
 
 <body>
-    <div id="age-verification">
-        <h1>Kin Kon Bebidas S.A.</h1>
-        <p>Por favor, confirma que eres mayor de edad para comprar bebidas alcohólicas:</p>
-        <button onclick="confirmAge()">Sí, soy mayor de edad</button>
+
+    <div class="container-fluid">
+        <div id="age-verification" class="text-center mt-3 p-3">
+            <h1>Kin Kon Bebidas S.A.</h1>
+            <p>Por favor, confirma que eres mayor de edad para comprar bebidas alcohólicas:</p>
+
+            <!-- Sistema de rejillas de Bootstrap para establecer el diseño -->
+            <div class="row">
+                <div class="col-12 p-3"> <!-- Botón ocupa todo el ancho -->
+                    <button onclick="confirmAge()" class="btn btn-primary">Sí, soy mayor de edad</button>
+                </div>
+                <div class="col-12 mt-3 p-3"> <!-- Imagen ocupa todo el ancho con espacio superior -->
+                    <img class="img-fluid" src="./assets/images/Gorila Age Verification.png" alt="Gorila Age Verification">
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <nav id="main-nav" style="display: none;">
-        <ul>
-            <li><a href="#" onclick="loadHome()">Inicio</a></li>
-            <li><a href="#" onclick="loadProducts()">Productos</a></li>
-            <li><a href="#" onclick="loadCart()">Carrito</a></li>
-            <!-- Puedes agregar más elementos según sea necesario -->
-        </ul>
-    </nav>
+    <audio id="sonidoMono" src="./assets/sounds/Jumanji.mp3" preload="auto"></audio>
 
-    <section id="content">
-        <!-- Aquí se mostrarán los productos o el contenido del carrito -->
-    </section>
+    <div class="container-fluid">
+        <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-dark mt-3" style="display: none;">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#" onclick="loadHome()">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="loadProducts()">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="loadCart()">Carrito</a></li>
+                <!-- Puedes agregar más elementos según sea necesario -->
+            </ul>
+        </nav>
+    </div>
+
+    <div id="age-verified-content" class="container mt-3 text-center" style="display: none;">
+        <h1>¡Bienvenido, hermano gorila!</h1>
+        <p>Tenemos las mejores bebidas para que te conviertas en el rey de la selva.</p>
+        <img id="logoMono" src="./assets/images/Gorilla-Drinking-Beer-73672773-1-removebg-preview.png"
+            alt="KIN KON LOGO" class="img-fluid">
+    </div>
+
+    <div class="container mt-3">
+        <section id="content">
+            <!-- Aquí se mostrarán los productos o el contenido del carrito -->
+        </section>
+    </div>
 
     <script src="inicio.js"></script>
     <script src="productos.js"></script>
     <script src="carrito.js"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
