@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIxPqy4z9t3L6e1tkgIkSqQnE72E+DQe" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/bootstrap.min.css">
     <title>Kin Kon Bebidas S.A.</title>
 </head>
 
-<body>
+<body class="carrito">
 
     <div id="nav-carousel-container">
 
@@ -20,23 +24,24 @@
                 </button>
 
                 <div class="navbar-brand d-flex justify-content-center align-items-center">
-                    <p class="navbar-brand m-0">KinKon Bebidas</p>
+                    <p class="navbar-brand m-0" id="nombreComercio">KinKon Bebidas</p>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" href="../index.html" onclick="loadHome()">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../index.html" onclick="loadProducts()">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadProducts()">Productos</a></li>
                     </ul>
                 </div>
 
-                <ul class="navbar-nav contain">
+                <ul class="navbar-nav ml-auto order-2 order-md-last">
                     <li class="nav-item cart-icon">
                         <a class="nav-link" href="./pages/carrito.html">
-                            <img src="../assets/images/logocarrito.png" alt="Carrito de compras">
+                            <img src="../assets/images/logocarrito.png" alt="Carrito de compras" id="carritoLink">
                         </a>
                     </li>
                 </ul>
+
             </nav>
         </div>
 
@@ -61,30 +66,32 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
             </button>
-    </div>
-    
+        </div>
 
-    <main>
-        <h1>Carrito de Compras</h1>
-        <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
-    </main>
+        <div class="container-fluid mt-3">
+            <section id="content">
+                <div class="carrito d-flex flex-column align-items-center col-12">
+                    <h2>Carrito de Compras</h2>
+                    <ul id="carrito-lista">
+                        <!-- Aquí se mostrarán los productos en el carrito -->
+                    </ul>
 
-   <main>
-        <section id="cart-items">
-            <!-- Aquí se mostrarán los productos del carrito -->
-        </section>
+                    <!-- Botón de pago -->
 
-        <section id="order-form">
-            <h2>Detalles del Pedido</h2>
-            <!-- Formulario para la información de envío y método de pago -->
-            <button id="checkout-btn">Pagar</button>
-        </section>
-    </main>
+                    <p>Total: $<span id="total">0.00</span></p>
 
-    <footer>
-        <!-- Enlaces a políticas y contacto -->
-    </footer>
-   <script src="../carrito.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+                    <button id="boton-pago" class="btn btn-primary">Pagar</button>
+                </div>
+            </section>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="..." crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js" integrity="..."
+            crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <script src="productos.js"></script>
+
 </body>
+
 </html>

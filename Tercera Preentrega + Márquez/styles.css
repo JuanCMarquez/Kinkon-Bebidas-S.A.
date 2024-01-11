@@ -1,15 +1,23 @@
+body {
+    background-image: url('./assets/images/beer.jpg');
+    /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta correcta de tu imagen */
+    background-size: fixed;
+    /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center center;
+    /* Centra la imagen en el fondo */
+    background-color: rgb(253, 255, 115);
+}
+
 header,
 #age-verification {
     text-align: center;
     padding: 2em;
 }
 
-body, #age-verification {
-    background-image: url('./assets/images/beer.jpg'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta correcta de tu imagen */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center center; /* Centra la imagen en el fondo */
-    background-color: rgb(253, 255, 115);
+body,
+#age-verification {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 180%;
 }
@@ -31,27 +39,33 @@ body, #age-verification {
 
 #age-verification img {
     padding-top: 2em;
-    width: 320px; /* Cambia el ancho según tus preferencias */
-    height: auto; /* Mantiene la proporción original de la imagen */
+    width: 320px;
+    /* Cambia el ancho según tus preferencias */
+    height: auto;
+    /* Mantiene la proporción original de la imagen */
 }
 
 /* Estilos para el contenido después de la verificación de edad */
 #age-verified-content {
-    color: #111111; /* Cambia el color del texto según tu preferencia */
+    color: #111111;
+    /* Cambia el color del texto según tu preferencia */
 }
 
 #age-verified-content h1 {
-    font-size: 300%; /* Cambia el tamaño de la fuente del encabezado según tu preferencia */
+    font-size: 300%;
+    /* Cambia el tamaño de la fuente del encabezado según tu preferencia */
     -webkit-text-stroke: 0.50px #700d00;
-	text-shadow: 0px 0.5px 0.5px #a7a7a7;
-    padding: 20px; /* Ajusta el espacio interno según sea necesario */
+    text-shadow: 0px 0.5px 0.5px #a7a7a7;
+    padding: 20px;
+    /* Ajusta el espacio interno según sea necesario */
 }
 
 #age-verified-content p {
     color: rgb(80, 9, 9);
-    font-size: 250%; /* Cambia el tamaño de la fuente del párrafo según tu preferencia */
+    font-size: 250%;
+    /* Cambia el tamaño de la fuente del párrafo según tu preferencia */
     -webkit-text-stroke: 1px #000000;
-	text-shadow: 1px 1px 1px #e00303;
+    text-shadow: 1px 1px 1px #e00303;
 }
 
 /* Si deseas personalizar la fuente, puedes utilizar Google Fonts u otras fuentes web */
@@ -59,12 +73,16 @@ body, #age-verification {
 nav {
     background-color: #aaa2a1;
     color: #fff;
-    padding: 0em;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
     list-style-type: none;
-    margin-bottom: 0;
+    margin: 0;
     padding: 0;
     display: flex;
 }
@@ -83,23 +101,44 @@ nav a:hover {
     color: #ccc;
 }
 
-/* Agrega esta regla CSS en tu archivo de estilos */
-.navbar-nav.contain .cart-icon img {
-    width: 50px; /* Establece el ancho del icono según tus necesidades */
-    height: 50px; /* Establece la altura del icono según tus necesidades */
-    /* Puedes ajustar estos valores según tus preferencias */
+#nombreComercio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 768px) {
+    #nombreComercio {
+        display: none;
+    }
+}
+
+
+#carritoLink {
+    position: absolute;
+    top: 20%;
+    /* Puedes ajustar este valor según tus necesidades */
+    right: 5%;
+    /* Puedes ajustar este valor según tus necesidades */
+    width: 50px;
+    height: 50px;
+}
+
+
 #logoMono {
-    max-width: 100%; /* La imagen no superará el ancho del contenedor */
-    height: auto;    /* La altura se ajustará automáticamente para mantener la proporción */
-    width: 400px;    /* Puedes ajustar este valor según tus necesidades */
+    max-width: 100%;
+    /* La imagen no superará el ancho del contenedor */
+    height: auto;
+    /* La altura se ajustará automáticamente para mantener la proporción */
+    width: 400px;
+    /* Puedes ajustar este valor según tus necesidades */
 }
 
 #bebidas-carousel {
-    background-color: #fff; 
+    background-color: #fff;
     overflow: hidden;
-    padding: 0px; 
+    padding: 0px;
     margin-top: 0px;
 }
 
@@ -109,38 +148,43 @@ nav a:hover {
 }
 
 .carousel-inner {
-    display: flex; 
-    animation: scroll 35s linear infinite; 
+    display: flex;
+    animation: scroll 5s linear;
 }
 
 .carousel-item {
     color: #000;
     flex: 0 0 auto;
     margin-right: 0px;
-    /* white-space: nowrap; */ /* Comenta o elimina esta línea */
+    /* white-space: nowrap; */
+    /* Comenta o elimina esta línea */
 }
 
 @keyframes scroll {
     0% {
         transform: translateX(-100%);
     }
+
     100% {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
 }
 
 #bebidas-carousel .carousel-item a {
     color: #000 !important;
     text-decoration: none !important;
-    margin-right: 10px; /* Ajusta según tus necesidades */
-    margin-top: 10px; /* Ajusta según tus necesidades */
+    margin-right: 10px;
+    /* Ajusta según tus necesidades */
+    margin-top: 10px;
+    /* Ajusta según tus necesidades */
     margin-bottom: 10px;
     padding: 10px;
 }
 
 @media (max-width: 767px) {
     .carousel {
-        display: none; /* Desactiva la animación en dispositivos móviles */
+        display: none;
+        /* Desactiva la animación en dispositivos móviles */
     }
 }
 
@@ -174,6 +218,59 @@ main {
 
 #cart-items img {
     max-width: 50px;
+}
+
+/* Estilos específicos para la animación en el index.html */
+.index #bebidas-carousel {
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.index #bebidas-carousel .carousel-control-prev,
+.index #bebidas-carousel .carousel-control-next {
+    display: none;
+}
+
+.index .carousel-inner {
+    display: flex;
+    animation: scroll 5s linear;
+}
+
+.index .carousel-item {
+    color: #000;
+    flex: 0 0 auto;
+    margin-right: 0px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.index #bebidas-carousel .carousel-item a {
+    color: #000 !important;
+    text-decoration: none !important;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .carousel {
+        display: none;
+    }
+}
+
+/* Estilos específicos para desactivar la animación en el carrito.html */
+.carrito .carousel-inner {
+    animation: none;
 }
 
 #order-form {
