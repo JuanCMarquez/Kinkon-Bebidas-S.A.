@@ -11,38 +11,60 @@ body, #age-verification {
     background-position: center center; /* Centra la imagen en el fondo */
     background-color: rgb(253, 255, 115);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5em;
+    font-size: 180%;
 }
 
 #age-verification h1 {
-    margin-bottom: 0.25em;
+    margin-bottom: 0.75em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:rgb(0, 0, 0);
-    font-size: 400%;
+    font-size: 2.3em;
     -webkit-text-stroke: 1px #504f4f;
-	text-shadow: 0px 4px 4px #464646;
+	text-shadow: 0px 3px 3px #464646;
 }
 
 #age-verification button {
-    padding: 0.5em 1em;
-    font-size: 1.25em;
+    padding: 0.75em 1.25em;
+    font-size: 100%;
     cursor: pointer;
 }
 
 #age-verification img {
-    width: 300px; /* Cambia el ancho según tus preferencias */
+    padding-top: 2em;
+    width: 320px; /* Cambia el ancho según tus preferencias */
     height: auto; /* Mantiene la proporción original de la imagen */
 }
+
+/* Estilos para el contenido después de la verificación de edad */
+#age-verified-content {
+    color: #111111; /* Cambia el color del texto según tu preferencia */
+}
+
+#age-verified-content h1 {
+    font-size: 300%; /* Cambia el tamaño de la fuente del encabezado según tu preferencia */
+    -webkit-text-stroke: 0.50px #700d00;
+	text-shadow: 0px 0.5px 0.5px #a7a7a7;
+    padding: 20px; /* Ajusta el espacio interno según sea necesario */
+}
+
+#age-verified-content p {
+    color: rgb(80, 9, 9);
+    font-size: 250%; /* Cambia el tamaño de la fuente del párrafo según tu preferencia */
+    -webkit-text-stroke: 1px #000000;
+	text-shadow: 1px 1px 1px #e00303;
+}
+
+/* Si deseas personalizar la fuente, puedes utilizar Google Fonts u otras fuentes web */
 
 nav {
     background-color: #aaa2a1;
     color: #fff;
-    padding: 1em;
+    padding: 0em;
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin-bottom: 0;
     padding: 0;
     display: flex;
 }
@@ -64,6 +86,47 @@ nav a:hover {
 #logoMono {
     max-width: 100%; /* La imagen no superará el ancho del contenedor */
     height: auto;    /* La altura se ajustará automáticamente para mantener la proporción */
-    width: 300px;    /* Puedes ajustar este valor según tus necesidades */
+    width: 400px;    /* Puedes ajustar este valor según tus necesidades */
+}
+
+#bebidas-carousel {
+    background-color: #fff; 
+    overflow: hidden;
+    padding: 0px; 
+    margin-top: 0px;
+}
+
+#bebidas-carousel .carousel-control-prev,
+#bebidas-carousel .carousel-control-next {
+    display: none;
+}
+
+.carousel-inner {
+    display: flex; 
+    animation: scroll 35s linear infinite; 
+}
+
+.carousel-item {
+    color: #000; 
+    flex: 0 0 auto; 
+    margin-right: 0px; 
+    white-space: nowrap; 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+#bebidas-carousel .carousel-item a {
+    color: #000 !important; 
+    text-decoration: none !important; 
+    margin-right: 0px; 
+    margin-top: 00px;
+    padding: 10px;
 }
 
