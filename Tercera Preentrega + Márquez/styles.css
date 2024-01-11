@@ -16,15 +16,15 @@ body, #age-verification {
 
 #age-verification h1 {
     margin-bottom: 0.75em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color:rgb(0, 0, 0);
     font-size: 2.3em;
-    -webkit-text-stroke: 1px #504f4f;
-	text-shadow: 0px 3px 3px #464646;
+    -webkit-text-stroke: 1px #1d00be;
+	text-shadow: 0px 3px 3px #5c0101;
 }
 
 #age-verification button {
-    padding: 0.75em 1.25em;
+    padding: 0.7em 0.9em;
     font-size: 100%;
     cursor: pointer;
 }
@@ -83,6 +83,13 @@ nav a:hover {
     color: #ccc;
 }
 
+/* Agrega esta regla CSS en tu archivo de estilos */
+.navbar-nav.contain .cart-icon img {
+    width: 50px; /* Establece el ancho del icono según tus necesidades */
+    height: 50px; /* Establece la altura del icono según tus necesidades */
+    /* Puedes ajustar estos valores según tus preferencias */
+}
+
 #logoMono {
     max-width: 100%; /* La imagen no superará el ancho del contenedor */
     height: auto;    /* La altura se ajustará automáticamente para mantener la proporción */
@@ -107,10 +114,10 @@ nav a:hover {
 }
 
 .carousel-item {
-    color: #000; 
-    flex: 0 0 auto; 
-    margin-right: 0px; 
-    white-space: nowrap; 
+    color: #000;
+    flex: 0 0 auto;
+    margin-right: 0px;
+    /* white-space: nowrap; */ /* Comenta o elimina esta línea */
 }
 
 @keyframes scroll {
@@ -123,10 +130,16 @@ nav a:hover {
 }
 
 #bebidas-carousel .carousel-item a {
-    color: #000 !important; 
-    text-decoration: none !important; 
-    margin-right: 0px; 
-    margin-top: 00px;
+    color: #000 !important;
+    text-decoration: none !important;
+    margin-right: 10px; /* Ajusta según tus necesidades */
+    margin-top: 10px; /* Ajusta según tus necesidades */
+    margin-bottom: 10px;
     padding: 10px;
 }
 
+@media (max-width: 767px) {
+    .carousel {
+        display: none; /* Desactiva la animación en dispositivos móviles */
+    }
+}

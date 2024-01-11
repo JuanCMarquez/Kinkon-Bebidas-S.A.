@@ -1,3 +1,13 @@
+function rejectAge() {
+    // Lógica cuando el usuario no es mayor de edad
+    // Puedes realizar acciones adicionales si es necesario
+    exitProgram();
+}
+
+function exitProgram() {
+    window.location.href = 'https://www.google.com';
+}
+
 function playAudio() {
     var audio = document.getElementById('sonidoMono');
     audio.play();
@@ -21,6 +31,8 @@ function confirmAge() {
 
     // Guardar en local storage que el usuario confirmó ser mayor de edad
     localStorage.setItem("isAdult", "true");
+
+    window.scrollTo(0, 0);
 }
 
 // Función para cargar la página de inicio
@@ -49,6 +61,15 @@ window.onload = function () {
         document.getElementById("age-verification").style.display = "block";
     }
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+    var menuIcon = document.getElementById("menu-icon");
+    var menu = document.getElementById("menu");
+
+    menuIcon.addEventListener("click", function() {
+        menu.classList.toggle("show");
+    });
+});
 
 
 
