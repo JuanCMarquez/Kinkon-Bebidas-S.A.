@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIxPqy4z9t3L6e1tkgIkSqQnE72E+DQe" crossorigin="anonymous">
     <link rel="stylesheet" href="path/to/bootstrap.min.css">
     <title>Kin Kon Bebidas S.A.</title>
 </head>
@@ -44,18 +42,18 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-        
+
                 <div class="navbar-brand d-flex justify-content-center align-items-center">
                     <p class="navbar-brand m-0" id="nombreComercio">KinKon Bebidas</p>
                 </div>
-        
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" href="#" onclick="loadHome()">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" onclick="loadProducts()">Productos</a></li>
                     </ul>
                 </div>
-        
+
                 <ul class="navbar-nav ml-auto order-2 order-md-last">
                     <li class="nav-item cart-icon">
                         <a class="nav-link" href="./pages/carrito.html">
@@ -67,47 +65,64 @@
             </nav>
         </div>
 
-        <div id="bebidas-carousel" class="carousel slide container-fluid mt-5 p-4" data-bs-ride="carousel">
+        <div id="bebidas-carousel" class="carousel slide container-fluid mt-5 p-5" data-bs-ride="carousel">
             <div class="carousel-inner d-flex flex-wrap justify-content-between">
                 <div class="carousel-item active d-flex justify-content-between align-items-center">
-                    <a class="d-block px-md-3 px-lg-5 mr-3" href="#enlace_bebida_1">Cerveza</a>
-                    <a class="d-block px-md-3 px-lg-5 mr-3" href="#enlace_bebida_2">Whisky</a>
-                    <a class="d-block px-md-3 px-lg-5 mr-3" href="#enlace_bebida_3">Vino</a>
-                    <a class="d-block px-md-3 px-lg-5 mr-3" href="#enlace_bebida_4">Vodka</a>
-                    <a class="d-block px-md-3 px-lg-5 mr-3" href="#enlace_bebida_5">Fernet</a>
-                    <a class="d-block px-md-3 px-lg-5 mr-3" href="#enlace_bebida_6">Ginebra</a>
-                    <a class="d-block px-md-3 px-lg-5 mr-3" href="#enlace_bebida_7">Licores</a>
-                    <a class="d-block px-md-3 px-lg-5 mr-3" href="#enlace_bebida_8">Espumantes</a>
+                    <div class="d-block px-md-3 px-lg-5 mr-3 navegar">Cerveza</div>
+                    <div class="d-block px-md-3 px-lg-5 mr-3 navegar">Whisky</div>
+                    <div class="d-block px-md-3 px-lg-5 mr-3 navegar">Vino</div>
+                    <div class="d-block px-md-3 px-lg-5 mr-3 navegar">Vodka</div>
+                    <div class="d-block px-md-3 px-lg-5 mr-3 navegar">Fernet</div>
+                    <div class="d-block px-md-3 px-lg-5 mr-3 navegar">Ginebra</div>
+                    <div class="d-block px-md-3 px-lg-5 mr-3 navegar">Licores</div>
+                    <div class="d-block px-md-3 px-lg-5 mr-3 navegar">Espumantes</div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#bebidas-carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#bebidas-carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
         </div>
 
-        <div id="age-verified-content" class="container-fluid mt-3 text-center" style="display: none;">
-            <h1 class="container-fluid">¡Bienvenido, hermano gorila!</h1>
-            <p class="container-fluid">Tenemos las mejores bebidas para que te conviertas en el rey de la selva.</p>
-            <img id="logoMono" src="./assets/images/Gorilla-Drinking-Beer-73672773-1-removebg-preview.png"
-                alt="KIN KON LOGO" class="img-fluid">
-        </div>
+    <div id="age-verified-content" class="container-fluid mt-3 text-center" style="display: none;">
+        <h1 class="container-fluid">¡Bienvenido, hermano gorila!</h1>
+        <p class="container-fluid">Tenemos las mejores bebidas para que te conviertas en el rey de la selva.</p>
+        <img id="logoMono" src="./assets/images/Gorilla-Drinking-Beer-73672773-1-removebg-preview.png"
+            alt="KIN KON LOGO" class="img-fluid">
+    </div>
 
-        <div class="container mt-3">
-            <section id="content">
-                <!-- Aquí se mostrarán los productos o el contenido del carrito -->
-            </section>
-        </div>
+    <!-- Contenido de la Página -->
+    <div class="container-fluid mt-4">
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="..." crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js" integrity="..."
-            crossorigin="anonymous"></script>
-        <script src="main.js"></script>
-        <script src="productos.js"></script>
+        <section id="seccion1" class="product-category cerveza">
+            <h2>Cerveza</h2>
+            <ul class="product-list">
+                <!-- Lista de productos de cerveza -->
+                <li class="product-item">Cerveza 1</li>
+                <li class="product-item">Cerveza 2</li>
+                <!-- Agrega más productos según sea necesario -->
+            </ul>
+        </section>
+
+        <section id="seccion2" class="product-category whisky">
+            <h2>Whisky</h2>
+            <ul class="product-list">
+                <!-- Lista de productos de whisky -->
+                <li class="product-item">Whisky 1</li>
+                <li class="product-item">Whisky 2</li>
+                <!-- Agrega más productos según sea necesario -->
+            </ul>
+        </section>
+        </section>
+
+        <!-- Repite la estructura para otras categorías -->
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pzjw8q+3lWqBs7mIZFq4QCqfNkOuHa/rg5OP1nCVAjzAVFQGgS6QF9E8bBDtv7Vp"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="productos.js"></script>
 
 </body>
 
