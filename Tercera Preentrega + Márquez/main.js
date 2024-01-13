@@ -1,6 +1,4 @@
 function rejectAge() {
-    // Lógica cuando el usuario no es mayor de edad
-    // Puedes realizar acciones adicionales si es necesario
     exitProgram();
 }
 
@@ -9,77 +7,110 @@ function exitProgram() {
 }
 
 function playAudio() {
-    var audio = document.getElementById('sonidoMono');
+    let audio = document.getElementById('sonidoMono');
     audio.play();
 }
 
-// Función para confirmar la edad
 function confirmAge() {
-    // Reproducir audio
     playAudio();
 
-    // Ocultar la sección de verificación de edad
-    var ageVerificationSection = document.getElementById('age-verification');
+    let ageVerificationSection = document.getElementById('age-verification');
     ageVerificationSection.style.display = 'none';
 
-    // Mostrar la barra de navegación y el contenido verificado
-    var navCarouselContainer = document.getElementById('nav-carousel-container');
-    var verifiedContent = document.getElementById('age-verified-content');
+    let navCarouselContainer = document.getElementById('nav-carousel-container');
+    let verifiedContent = document.getElementById('age-verified-content');
+    let footer = document.getElementById('footer');
 
     navCarouselContainer.style.display = 'block';
     verifiedContent.style.display = 'block';
+    footer.style.display = 'block';
 
-    // Guardar en local storage que el usuario confirmó ser mayor de edad
     localStorage.setItem("isAdult", "true");
 
     window.scrollTo(0, 0);
 }
 
-// Función para cargar la página de inicio
 function loadHome() {
-    document.getElementById("content").innerHTML = "<h2>Bienvenido a la Tienda de Bebidas Alcohólicas</h2><p>Aquí encontrarás una selección de bebidas de alta calidad.</p>";
+    document.getElementById("content").innerHTML;
 }
 
-// Función para cargar la página de productos
 function loadProducts() {
-    document.getElementById("content").innerHTML = "<h2>Nuestros Productos</h2><p>Lista de productos y descripciones.</p>";
+    document.getElementById("content").innerHTML;
 }
 
-// Función para cargar la página del carrito
 function loadCart() {
-    document.getElementById("content").innerHTML = "<h2>Tu Carrito de Compras</h2><p>Contenido del carrito y proceso de compra.</p>";
+    document.getElementById("content").innerHTML;
 }
 
-// Verificar si el usuario ya confirmó ser mayor de edad al cargar la página
 window.onload = function () {
     const isAdult = localStorage.getItem("isAdult");
 
     if (isAdult === "true") {
         loadHome();
         document.getElementById("nav-carousel-container").style.display = "block";
+        document.getElementById('footer').style.display = 'block'; // Agrega esta línea
     } else {
         document.getElementById("age-verification").style.display = "block";
     }
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-    var menuIcon = document.getElementById("menu-icon");
-    var menu = document.getElementById("menu");
+const productos = [
+    { nombre: "Cerveza 1", categoria: "cerveza", precio: 5.99 },
+    { nombre: "Cerveza 2", categoria: "cerveza", precio: 6.99 },
+    { nombre: "Cerveza 3", categoria: "cerveza", precio: 7.99 },
+    { nombre: "Whisky 1", categoria: "whisky", precio: 29.99 },
+    { nombre: "Whisky 2", categoria: "whisky", precio: 39.99 },
+    { nombre: "Whisky 3", categoria: "whisky", precio: 49.99 },
+    { nombre: "Vodka 1", categoria: "vodka", precio: 19.99 },
+    { nombre: "Vodka 2", categoria: "vodka", precio: 24.99 },
+    { nombre: "Vodka 3", categoria: "vodka", precio: 29.99 },
+    { nombre: "Gin 1", categoria: "ginebra", precio: 14.99 },
+    { nombre: "Gin 2", categoria: "ginebra", precio: 17.99 },
+    { nombre: "Gin 3", categoria: "ginebra", precio: 21.99 }
+];
 
-    menuIcon.addEventListener("click", function() {
-        menu.classList.toggle("show");
+function agregarAlCarrito(producto) {
+    carrito.push(producto);
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const carritoLista = document.getElementById("carrito-lista");
+    const totalElemento = document.getElementById("total");
+
+    carritoLista.innerHTML = "";
+
+    let total = 0;
+
+    carrito.forEach(producto => {
+        const li = document.createElement("li");
+        li.textContent = producto.nombre + " - $" + producto.precio.toFixed(2);
+        carritoLista.appendChild(li);
+
+        total += producto.precio;
+    });
+
+    totalElemento.textContent = total.toFixed(2);
+}
+
+document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        const nombreProducto = this.dataset.product;
+        const producto = productos.find(p => p.nombre === nombreProducto);
+
+        if (producto) {
+            agregarAlCarrito(producto);
+        }
     });
 });
 
-$(document).ready(function() {
-    $('.navegar').on('click', function(e) {
-      e.preventDefault();
-      var target = $(this).attr('href');
-      $('html, body').animate({
-        scrollTop: $(target).offset().top
-      }, 1000);
-    });
-  });
+document.getElementById("boton-pago").addEventListener("click", function () {
 
+});
 
+const carrito = [];
 
+document.getElementById("boton-pago").addEventListener("click", function () {
+    carrito.length = 0;
+    actualizarCarrito();
+});

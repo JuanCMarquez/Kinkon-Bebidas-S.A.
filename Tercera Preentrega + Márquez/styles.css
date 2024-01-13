@@ -1,9 +1,10 @@
-body {
+body,
+#age-verifiaction {
     background-image: url('./assets/images/beer.jpg');
     /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta correcta de tu imagen */
     background-size: cover;
     /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     /* Evita que la imagen se repita */
     background-position: center center;
     /* Centra la imagen en el fondo */
@@ -45,6 +46,10 @@ body,
     /* Mantiene la proporción original de la imagen */
 }
 
+#age-verified body {
+    background-image: url(./assets/images/wallamarillo.jpg);
+}
+
 /* Estilos para el contenido después de la verificación de edad */
 #age-verified-content {
     color: #111111;
@@ -61,9 +66,9 @@ body,
     /* Ajusta el espacio interno según sea necesario */
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 765px) {
     #age-verified-content h1 {
-        margin-top: 20%;
+        margin-top: 75px;
     }
 }
 
@@ -98,6 +103,20 @@ nav a:hover {
     color: #ccc;
 }
 
+#desplegableProductos {
+    background-color: rgb(29, 29, 29);
+}
+
+
+#desplegableProductos a {
+    color: rgb(192, 190, 190);
+}
+
+#desplegableProductos a:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
 #nombreComercio {
     position: absolute;
     top: 50%;
@@ -130,6 +149,10 @@ nav a:hover {
     /* La altura se ajustará automáticamente para mantener la proporción */
     width: 400px;
     /* Puedes ajustar este valor según tus necesidades */
+}
+
+#nav-carousel-container {
+    display: none;
 }
 
 #bebidas-carousel {
@@ -281,49 +304,199 @@ footer {
     text-align: center;
 }
 
+#age-verified-content {
+    display: none;
+}
+
 .product-category {
     margin-bottom: 20px;
     text-align: center;
+    padding: 70px;
 }
 
-  .product-list {
-    list-style: none;
-    padding: 0;
-  }
+.product-category h2 {
+    margin-top: 30px;
+    text-align: center;
+}
 
-  .product-item {
+.product-list {
+    list-style: none;
+    padding: 30px;
+}
+
+.product-item {
     border: 1px solid #ccc;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 6px;
-  }
+}
 
-  /* Estilos específicos para cada categoría */
-  .cerveza {
+.cerveza {
     color: white;
     text-shadow: 4px 4px 4px #000000;
     background-color: #f8d7da;
     background-size: cover;
-    background-image: url(./assets/images/Fondo\ para\ productos.jpg); 
+    background-image: url(./assets/images/Fondo\ para\ productos.jpg);
     background-position: 50% 60%;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 40px;
+    margin-top: 100px;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 50px;
-  }
+    margin-bottom: 20px;
+}
 
-  .whisky {
+.whisky {
     color: white;
     text-shadow: 4px 4px 4px #000000;
     background-color: #f8d7da;
     background-size: cover;
-    background-image: url(./assets/images/Fondo\ para\ productos.jpg); 
+    background-image: url(./assets/images/Fondo\ para\ productos.jpg);
     background-position: 50% 60%;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 40px;
+    margin-top: 100px;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 50px;
-  }
-  
+    margin-bottom: 20px;
+}
+
+.vodka {
+    color: white;
+    text-shadow: 4px 4px 4px #000000;
+    background-color: #f8d7da;
+    background-size: cover;
+    background-image: url(./assets/images/Fondo\ para\ productos.jpg);
+    background-position: 50% 60%;
+    padding: 40px;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+}
+
+.ginebra {
+    color: white;
+    text-shadow: 4px 4px 4px #000000;
+    background-color: #f8d7da;
+    background-size: cover;
+    background-image: url(./assets/images/Fondo\ para\ productos.jpg);
+    background-position: 50% 60%;
+    padding: 40px;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+}
+
+#carritoFinal {
+    padding: 40px;
+    margin-bottom: 80px;
+}
+
+.carrito {
+    color: white;
+    text-shadow: 5px 5px 5px #000000;
+    font-size: 25px;
+}
+
+.carrito h1 {
+    color: white;
+    text-shadow: 5px 5px 5px #000000;
+    font-size: 40px;
+}
+
+footer {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 2em;
+    text-align: center;
+    color: #fff;
+    background-color: #181818;
+    font-size: 14px;
+    font-style: italic;
+}
+
+footer .redesSociales {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    max-height: 31px;
+    max-width: 31px;
+}
+
+@media (min-width: 0px) and (max-width: 535px) {
+    footer .redesSociales {
+        margin-top: 50px;
+        margin-bottom: 15px;
+        height: 17px;
+        width: 17px;
+    }
+}
+
+footer .logoAutor {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 130px;
+    width: 130px;
+}
+
+@media (min-width: 0px) and (max-width: 535px) {
+    footer .logoAutor {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 80px;
+        width: 80px;
+    }
+}
+
+footer .textoAutor {
+    margin-top: -15px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #181818;
+    font-size: 15px;
+    font-style: italic;
+}
+
+@media (min-width: 0px) and (max-width: 535px) {
+    footer .textoAutor {
+        margin-top: -15px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #fff;
+        background-color: #181818;
+        font-size: 12px;
+        font-style: italic;
+    }
+}
+
+footer .textoFoot {
+    margin-top: 18px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #fff;
+    background-color: #181818;
+    font-size: 17px;
+    font-style: italic;
+}
+
+footer #copyFoot {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #fff;
+    background-color: #181818;
+    font-size: 15px;
+    font-style: italic;
+}
+
+@media (max-width: 535px) {
+    footer #copyFoot {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+}
+
+#footer {
+    display: none;
+}
