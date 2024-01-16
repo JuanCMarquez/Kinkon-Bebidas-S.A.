@@ -1,13 +1,9 @@
 body,
 #age-verifiaction {
     background-image: url('./assets/images/beer.jpg');
-    /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta correcta de tu imagen */
     background-size: cover;
-    /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
     background-repeat: repeat;
-    /* Evita que la imagen se repita */
     background-position: center center;
-    /* Centra la imagen en el fondo */
     background-color: rgb(253, 255, 115);
 }
 
@@ -41,9 +37,7 @@ body,
 #age-verification img {
     padding-top: 2em;
     width: 320px;
-    /* Cambia el ancho según tus preferencias */
     height: auto;
-    /* Mantiene la proporción original de la imagen */
 }
 
 #age-verified body {
@@ -53,17 +47,14 @@ body,
 /* Estilos para el contenido después de la verificación de edad */
 #age-verified-content {
     color: #111111;
-    /* Cambia el color del texto según tu preferencia */
 }
 
 #age-verified-content h1 {
     font-size: 300%;
-    /* Cambia el tamaño de la fuente del encabezado según tu preferencia */
     -webkit-text-stroke: 0.50px #700d00;
     text-shadow: 0px 0.5px 0.5px #a7a7a7;
     padding: 20px;
     margin-top: 1%;
-    /* Ajusta el espacio interno según sea necesario */
 }
 
 @media only screen and (max-width: 765px) {
@@ -75,12 +66,9 @@ body,
 #age-verified-content p {
     color: rgb(80, 9, 9);
     font-size: 250%;
-    /* Cambia el tamaño de la fuente del párrafo según tu preferencia */
     -webkit-text-stroke: 1px #000000;
     text-shadow: 1px 1px 1px #e00303;
 }
-
-/* Si deseas personalizar la fuente, puedes utilizar Google Fonts u otras fuentes web */
 
 nav ul {
     list-style-type: none;
@@ -134,9 +122,7 @@ nav a:hover {
 #carritoLink {
     position: absolute;
     top: 20%;
-    /* Puedes ajustar este valor según tus necesidades */
     right: 5%;
-    /* Puedes ajustar este valor según tus necesidades */
     width: 50px;
     height: 50px;
 }
@@ -144,11 +130,8 @@ nav a:hover {
 
 #logoMono {
     max-width: 100%;
-    /* La imagen no superará el ancho del contenedor */
     height: auto;
-    /* La altura se ajustará automáticamente para mantener la proporción */
     width: 400px;
-    /* Puedes ajustar este valor según tus necesidades */
 }
 
 #nav-carousel-container {
@@ -176,8 +159,6 @@ nav a:hover {
     color: #000;
     flex: 0 0 auto;
     margin-right: 0px;
-    /* white-space: nowrap; */
-    /* Comenta o elimina esta línea */
 }
 
 @keyframes scroll {
@@ -194,9 +175,7 @@ nav a:hover {
     color: #000 !important;
     text-decoration: none !important;
     margin-right: 10px;
-    /* Ajusta según tus necesidades */
     margin-top: 10px;
-    /* Ajusta según tus necesidades */
     margin-bottom: 10px;
     padding: 10px;
 }
@@ -204,7 +183,6 @@ nav a:hover {
 @media (max-width: 767px) {
     .carousel {
         display: none;
-        /* Desactiva la animación en dispositivos móviles */
     }
 }
 
@@ -238,59 +216,6 @@ main {
 
 #cart-items img {
     max-width: 50px;
-}
-
-/* Estilos específicos para la animación en el index.html */
-.index #bebidas-carousel {
-    background-color: #fff;
-    overflow: hidden;
-    padding: 0px;
-    margin-top: 0px;
-}
-
-.index #bebidas-carousel .carousel-control-prev,
-.index #bebidas-carousel .carousel-control-next {
-    display: none;
-}
-
-.index .carousel-inner {
-    display: flex;
-    animation: scroll 5s linear;
-}
-
-.index .carousel-item {
-    color: #000;
-    flex: 0 0 auto;
-    margin-right: 0px;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-.index #bebidas-carousel .carousel-item a {
-    color: #000 !important;
-    text-decoration: none !important;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 767px) {
-    .carousel {
-        display: none;
-    }
-}
-
-/* Estilos específicos para desactivar la animación en el carrito.html */
-.carrito .carousel-inner {
-    animation: none;
 }
 
 #order-form {
@@ -385,6 +310,12 @@ footer {
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 20px;
+}
+
+.carrito {
+    background-image: url(./assets/images/fondocarrito1.png);
+    background-size: cover;
+    padding: 25px;
 }
 
 #carritoFinal {
