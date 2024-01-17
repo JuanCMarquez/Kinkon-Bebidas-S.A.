@@ -270,6 +270,15 @@ footer {
     margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1900px) {
+    .cerveza {
+        margin-top: 100px;
+        margin-left: 16%;
+        margin-right: 16%;
+        margin-bottom: 20px;
+    }
+}
+
 .whisky {
     color: white;
     text-shadow: 4px 4px 4px #000000;
@@ -282,6 +291,15 @@ footer {
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1900px) {
+    .whisky {
+        margin-top: 100px;
+        margin-left: 16%;
+        margin-right: 16%;
+        margin-bottom: 20px;
+    }
 }
 
 .vodka {
@@ -298,6 +316,16 @@ footer {
     margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1900px) {
+    .vodka {
+        margin-top: 100px;
+        margin-left: 16%;
+        margin-right: 16%;
+        margin-bottom: 20px;
+    }
+}
+
+
 .ginebra {
     color: white;
     text-shadow: 4px 4px 4px #000000;
@@ -312,6 +340,15 @@ footer {
     margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1900px) {
+    .ginebra {
+        margin-top: 100px;
+        margin-left: 16%;
+        margin-right: 16%;
+        margin-bottom: 20px;
+    }
+}
+
 .carrito {
     background-image: url(./assets/images/fondocarrito1.png);
     background-size: cover;
@@ -319,8 +356,31 @@ footer {
 }
 
 #carritoFinal {
-    padding: 40px;
-    margin-bottom: 80px;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 1900px) {
+    #carritoFinal {
+        padding: 20px;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #carritoFinal {
+        padding: 20px;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        margin-left: -17px;
+        margin-right: -17px;
+    }
 }
 
 .carrito {
