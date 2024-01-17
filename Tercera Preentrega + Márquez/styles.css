@@ -1,7 +1,7 @@
 body,
 #age-verifiaction {
     background-image: url('./assets/images/beer.jpg');
-    background-size: cover;
+    background-attachment: fixed;
     background-repeat: repeat;
     background-position: center center;
     background-color: rgb(253, 255, 115);

@@ -69,6 +69,8 @@ const productos = [
     { nombre: "Gin 3", categoria: "ginebra", precio: 21.99 }
 ];
 
+const carrito = [];
+
 function agregarAlCarrito(producto) {
     carrito.push(producto);
     actualizarCarrito();
@@ -105,12 +107,78 @@ document.querySelectorAll(".add-to-cart-btn").forEach(button => {
 });
 
 document.getElementById("boton-pago").addEventListener("click", function () {
+    if (carrito.length !== 0) {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                cancelButton: "btn btn-danger",
+                confirmButton: "btn btn-success",
+            },
+            buttonsStyling: false,
+        });
 
+        swalWithBootstrapButtons.fire({
+            title: "¿Estás seguro de tu compra?",
+            imageUrl: "./assets/images/gifgorila3.gif",
+            imageWidth: 200,
+            imageHeight: 200,
+            imageAlt: "monkeyChoise",
+            html: `Presiona si deseas confirmar.`,
+            icon: "warning",
+            showCancelButton: true,
+            cancelButtonText: "No quiero mi compra.",
+            confirmButtonText: `¡Sí, quiero mi compra!`,
+            reverseButtons: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let timerInterval;
+
+                Swal.fire({
+                    title: "Procesando compra...",
+                    html: "La transacción se completará en <b></b> segundos.",
+                    timer: 3000, // Ajusta el tiempo de espera en milisegundos (en este caso, 3 segundos)
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading();
+                        const timer = Swal.getPopup().querySelector("b");
+                        timerInterval = setInterval(() => {
+                            timer.textContent = Math.ceil(Swal.getTimerLeft() / 1000); // Muestra el tiempo restante en segundos
+                        }, 1000);
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval);
+                    }
+                }).then((result) => {
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        swalWithBootstrapButtons.fire({
+                            imageUrl: "./assets/images/gifgorila2.gif",
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            imageAlt: "monoAprobado",
+                            title: "¡Aprobado!",
+                            text: "Tu compra se ha realizado con éxito.",
+                            icon: "success",
+                        });
+                    }
+                });
+
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                swalWithBootstrapButtons.fire({
+                    title: "Compra cancelada",
+                    text: "Te invitamos a que sigas explorando nuestros productos.",
+                    icon: "error",
+                });
+            }
+        });
+
+        carrito.length = 0;
+        actualizarCarrito();
+    }
 });
 
-const carrito = [];
-
-document.getElementById("boton-pago").addEventListener("click", function () {
-    carrito.length = 0;
-    actualizarCarrito();
-});
+function calcularTotalCarrito() {
+    let total = 0;
+    for (const producto of carrito) {
+        total += producto.precio * producto.cantidad;
+    }
+    return total;
+}
