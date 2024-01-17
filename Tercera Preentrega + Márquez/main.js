@@ -135,13 +135,13 @@ document.getElementById("boton-pago").addEventListener("click", function () {
                 Swal.fire({
                     title: "Procesando compra...",
                     html: "La transacción se completará en <b></b> segundos.",
-                    timer: 3000, // Ajusta el tiempo de espera en milisegundos (en este caso, 3 segundos)
+                    timer: 3000, 
                     timerProgressBar: true,
                     didOpen: () => {
                         Swal.showLoading();
                         const timer = Swal.getPopup().querySelector("b");
                         timerInterval = setInterval(() => {
-                            timer.textContent = Math.ceil(Swal.getTimerLeft() / 1000); // Muestra el tiempo restante en segundos
+                            timer.textContent = Math.ceil(Swal.getTimerLeft() / 1000); 
                         }, 1000);
                     },
                     willClose: () => {
