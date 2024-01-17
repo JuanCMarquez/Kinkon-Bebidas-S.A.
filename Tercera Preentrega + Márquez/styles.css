@@ -395,6 +395,28 @@ footer {
     font-size: 40px;
 }
 
+.custom-confirm-button {
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.custom-cancel-button {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 375px) {
+    .custom-confirm-button,
+    .custom-cancel-button {
+        position: center;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
 footer {
     margin-top: 0px;
     margin-bottom: 0px;

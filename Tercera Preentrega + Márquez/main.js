@@ -114,6 +114,11 @@ document.getElementById("boton-pago").addEventListener("click", function () {
                 confirmButton: "btn btn-success",
             },
             buttonsStyling: false,
+            didRender: function () {
+                // Agrega estilos personalizados a los botones
+                document.querySelector('.swal2-confirm').classList.add('custom-confirm-button');
+                document.querySelector('.swal2-cancel').classList.add('custom-cancel-button');
+            }
         });
 
         swalWithBootstrapButtons.fire({
@@ -125,7 +130,7 @@ document.getElementById("boton-pago").addEventListener("click", function () {
             html: `Presiona si deseas confirmar.`,
             icon: "warning",
             showCancelButton: true,
-            cancelButtonText: "No quiero mi compra.",
+            cancelButtonText: "No quiero mi compra",
             confirmButtonText: `¡Sí, quiero mi compra!`,
             reverseButtons: false,
         }).then((result) => {
