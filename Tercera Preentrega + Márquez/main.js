@@ -16,7 +16,6 @@ function confirmAge() {
 
     let ageVerificationSection = document.getElementById('age-verification');
     ageVerificationSection.style.display = 'none';
-
     let navCarouselContainer = document.getElementById('nav-carousel-container');
     let verifiedContent = document.getElementById('age-verified-content');
     let footer = document.getElementById('footer');
@@ -72,7 +71,14 @@ const productos = [
 const carrito = [];
 
 function agregarAlCarrito(producto) {
-    carrito.push(producto);
+    const productoEnCarrito = carrito.find(p => p.nombre === producto.nombre);
+
+    if (productoEnCarrito) {
+        productoEnCarrito.cantidad++;
+    } else {
+        carrito.push({ ...producto, cantidad: 1 });
+    }
+
     actualizarCarrito();
 }
 
@@ -86,10 +92,10 @@ function actualizarCarrito() {
 
     carrito.forEach(producto => {
         const li = document.createElement("li");
-        li.textContent = producto.nombre + " - $" + producto.precio.toFixed(2);
+        li.textContent = `${producto.nombre} x${producto.cantidad} - $${(producto.precio * producto.cantidad).toFixed(2)}`;
         carritoLista.appendChild(li);
 
-        total += producto.precio;
+        total += producto.precio * producto.cantidad;
     });
 
     totalElemento.textContent = total.toFixed(2);
@@ -140,13 +146,13 @@ document.getElementById("boton-pago").addEventListener("click", function () {
                 Swal.fire({
                     title: "Procesando compra...",
                     html: "La transacción se completará en <b></b> segundos.",
-                    timer: 3000, 
+                    timer: 3000,
                     timerProgressBar: true,
                     didOpen: () => {
                         Swal.showLoading();
                         const timer = Swal.getPopup().querySelector("b");
                         timerInterval = setInterval(() => {
-                            timer.textContent = Math.ceil(Swal.getTimerLeft() / 1000); 
+                            timer.textContent = Math.ceil(Swal.getTimerLeft() / 1000);
                         }, 1000);
                     },
                     willClose: () => {
