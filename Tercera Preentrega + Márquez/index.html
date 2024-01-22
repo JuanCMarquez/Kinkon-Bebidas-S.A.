@@ -100,11 +100,34 @@
 
             <section id="seccion1" class="product-category cerveza">
                 <h2>Cerveza</h2>
+
                 <ul class="product-list">
-                    <li class="product-item">
-                        <span>Cerveza 1</span>
-                        <button class="add-to-cart-btn" data-product="Cerveza 1">Agregar al carrito</button>
-                    </li>
+
+                    <div class="item-container container-fluid">
+                        <div class="main-item">
+                            <img class="item-image" src="./assets/images/imagenCerveza1.png" alt="">
+                        </div>
+                        <h2 class="item-heading">
+                            Scottish
+                        </h2>
+
+                        <p class="item-description">
+                            Una cerveza tipo "Scottish Ale" con un porcentaje de alcohol del 5.5%.
+
+                        <p class="item-description">Contenido: 472 ml.</p>
+                        </p>
+                        <ul class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </ul>
+                        <p class="item-price">$1500.00</p>
+                        <button class="add-to-cart-btn" data-product="Scottish" onclick="buttonClick(this)">Agregar al carrito</button>
+                    </div>
+
+
                     <li class="product-item">
                         <span>Cerveza 2</span>
                         <button class="add-to-cart-btn" data-product="Cerveza 2">Agregar al carrito</button>

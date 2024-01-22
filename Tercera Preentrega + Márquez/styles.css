@@ -233,15 +233,90 @@ footer {
     display: none;
 }
 
-.product-category {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Ubuntu&display=swap');
+
+.item-container {
+    background-color: #020202de;
+    width: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(7, 7, 7, 0.808);
+}
+
+.main-item {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.item-heading {
+    text-transform: capitalize;
     margin-bottom: 20px;
+}
+
+.item-image {
+    width: 40%;
+}
+
+.item-description {
+    margin: .5rem 0;
+    font-size: .9rem;
+    font-weight: 200;
+}
+
+.item-price {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.item-price sup {
+    color: green;
+}
+
+.rating i {
+    color: rgb(200, 142, 254);
+    margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+    border: none;
+    background-color: transparent;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    background-color: rgb(225, 198, 250);
+    color: #000000;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.add-to-cart-btn:hover {
+    color: #fff;
+    background-color: rgb(121, 68, 170);
+}
+
+.clicked {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+.product-category {
     text-align: center;
     padding: 70px;
 }
 
 .product-category h2 {
-    margin-top: 30px;
+    margin-top: 25px;
     text-align: center;
+    font-size: 2.5em;
 }
 
 .product-list {
@@ -260,8 +335,8 @@ footer {
     color: white;
     text-shadow: 4px 4px 4px #000000;
     background-color: #f8d7da;
-    background-size: cover;
-    background-image: url(./assets/images/Fondo\ para\ productos.jpg);
+    background-size: fixed;
+    background-image: url(./assets/images/fondoproductos04.jpg);
     background-position: 50% 60%;
     padding: 40px;
     margin-top: 100px;
@@ -408,6 +483,7 @@ footer {
 }
 
 @media only screen and (max-width: 375px) {
+
     .custom-confirm-button,
     .custom-cancel-button {
         position: center;

@@ -54,7 +54,7 @@ window.onload = function () {
 };
 
 const productos = [
-    { nombre: "Cerveza 1", categoria: "cerveza", precio: 5.99 },
+    { nombre: "Scottish", categoria: "cerveza", precio: 1500 },
     { nombre: "Cerveza 2", categoria: "cerveza", precio: 6.99 },
     { nombre: "Cerveza 3", categoria: "cerveza", precio: 7.99 },
     { nombre: "Whisky 1", categoria: "whisky", precio: 29.99 },
@@ -68,10 +68,17 @@ const productos = [
     { nombre: "Gin 3", categoria: "ginebra", precio: 21.99 }
 ];
 
+function buttonClick(button) {
+    $(button).addClass('clicked');
+    setTimeout(function() {
+        $(button).removeClass('clicked');
+    }, 100);
+}
+
 const carrito = [];
 
 function agregarAlCarrito(producto) {
-    const productoEnCarrito = carrito.find(p => p.nombre === producto.nombre);
+    const productoEnCarrito = carrito.find(p => p.nombre.toLowerCase() === producto.nombre.toLowerCase());
 
     if (productoEnCarrito) {
         productoEnCarrito.cantidad++;
