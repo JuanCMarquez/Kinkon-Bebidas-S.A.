@@ -137,8 +137,8 @@ document.getElementById("boton-pago").addEventListener("click", function () {
         swalWithBootstrapButtons.fire({
             title: "¿Estás seguro de tu compra?",
             imageUrl: "./assets/images/gifgorila3.gif",
-            imageWidth: 200,
-            imageHeight: 200,
+            imageWidth: 105,
+            imageHeight: 105,
             imageAlt: "monkeyChoise",
             html: `Presiona si deseas confirmar.`,
             icon: "warning",
@@ -169,8 +169,8 @@ document.getElementById("boton-pago").addEventListener("click", function () {
                     if (result.dismiss === Swal.DismissReason.timer) {
                         swalWithBootstrapButtons.fire({
                             imageUrl: "./assets/images/gifgorila2.gif",
-                            imageWidth: 200,
-                            imageHeight: 200,
+                            imageWidth: 105,
+                            imageHeight: 105,
                             imageAlt: "monoAprobado",
                             title: "¡Aprobado!",
                             text: "Tu compra se ha realizado con éxito.",
