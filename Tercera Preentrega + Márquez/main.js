@@ -202,6 +202,7 @@ document.getElementById("boton-pago").addEventListener("click", function () {
                     text: "Te invitamos a que sigas explorando nuestros productos.",
                     icon: "error",
                 });
+                resetearContador();
             }
         });
 
