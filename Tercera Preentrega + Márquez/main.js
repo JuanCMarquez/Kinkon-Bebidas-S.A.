@@ -54,9 +54,9 @@ window.onload = function () {
 };
 
 const productos = [
-    { nombre: "Scottish", categoria: "cerveza", precio: 1500 },
-    { nombre: "Cerveza 2", categoria: "cerveza", precio: 6.99 },
-    { nombre: "Cerveza 3", categoria: "cerveza", precio: 7.99 },
+    { nombre: "Temple Scottish", categoria: "cerveza", precio: 1800 },
+    { nombre: "Temple Wolf Ipa", categoria: "cerveza", precio: 1800 },
+    { nombre: "Temple Honey", categoria: "cerveza", precio: 1800 },
     { nombre: "Whisky 1", categoria: "whisky", precio: 29.99 },
     { nombre: "Whisky 2", categoria: "whisky", precio: 39.99 },
     { nombre: "Whisky 3", categoria: "whisky", precio: 49.99 },
@@ -70,7 +70,7 @@ const productos = [
 
 function buttonClick(button) {
     $(button).addClass('clicked');
-    setTimeout(function() {
+    setTimeout(function () {
         $(button).removeClass('clicked');
     }, 100);
 }
