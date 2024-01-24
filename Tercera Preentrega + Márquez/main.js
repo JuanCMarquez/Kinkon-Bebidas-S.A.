@@ -76,6 +76,7 @@ function buttonClick(button) {
 }
 
 const carrito = [];
+let contador = 0; // Agregamos un contador global
 
 function agregarAlCarrito(producto) {
     const productoEnCarrito = carrito.find(p => p.nombre.toLowerCase() === producto.nombre.toLowerCase());
@@ -84,6 +85,13 @@ function agregarAlCarrito(producto) {
         productoEnCarrito.cantidad++;
     } else {
         carrito.push({ ...producto, cantidad: 1 });
+    }
+
+    contador++;
+
+    const contadorElemento = document.getElementById("contador");
+    if (contadorElemento) {
+        contadorElemento.textContent = contador;
     }
 
     actualizarCarrito();
@@ -118,6 +126,14 @@ document.querySelectorAll(".add-to-cart-btn").forEach(button => {
         }
     });
 });
+
+function resetearContador() {
+    contador = 0;
+    const contadorElemento = document.getElementById("contador");
+    if (contadorElemento) {
+        contadorElemento.textContent = contador;
+    }
+}
 
 document.getElementById("boton-pago").addEventListener("click", function () {
     if (carrito.length !== 0) {
@@ -176,6 +192,7 @@ document.getElementById("boton-pago").addEventListener("click", function () {
                             text: "Tu compra se ha realizado con éxito.",
                             icon: "success",
                         });
+                        resetearContador();
                     }
                 });
 
