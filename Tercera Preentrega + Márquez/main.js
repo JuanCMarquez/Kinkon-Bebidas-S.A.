@@ -57,12 +57,12 @@ const productos = [
     { nombre: "Temple Scottish", categoria: "cerveza", precio: 1800 },
     { nombre: "Temple Wolf Ipa", categoria: "cerveza", precio: 1800 },
     { nombre: "Temple Honey", categoria: "cerveza", precio: 1800 },
-    { nombre: "Whisky 1", categoria: "whisky", precio: 29.99 },
-    { nombre: "Whisky 2", categoria: "whisky", precio: 39.99 },
-    { nombre: "Whisky 3", categoria: "whisky", precio: 49.99 },
-    { nombre: "Vodka 1", categoria: "vodka", precio: 19.99 },
-    { nombre: "Vodka 2", categoria: "vodka", precio: 24.99 },
-    { nombre: "Vodka 3", categoria: "vodka", precio: 29.99 },
+    { nombre: "Ballantine's Finest", categoria: "whisky", precio: 16000 },
+    { nombre: "Johnnie Walker Red Label", categoria: "whisky", precio: 18000 },
+    { nombre: "Whisky J&B", categoria: "whisky", precio: 9000 },
+    { nombre: "Vodka Smirnoff", categoria: "vodka", precio: 4000 },
+    { nombre: "Vodka Sernova", categoria: "vodka", precio: 3000 },
+    { nombre: "Vodka Absolut", categoria: "vodka", precio: 15000 },
     { nombre: "Gin 1", categoria: "ginebra", precio: 14.99 },
     { nombre: "Gin 2", categoria: "ginebra", precio: 17.99 },
     { nombre: "Gin 3", categoria: "ginebra", precio: 21.99 }
@@ -99,13 +99,13 @@ function actualizarCarrito() {
 
     carrito.forEach(producto => {
         const li = document.createElement("li");
-        li.textContent = `${producto.nombre} x${producto.cantidad} - $${(producto.precio * producto.cantidad).toFixed(2)}`;
+        li.textContent = `${producto.nombre} x${producto.cantidad} - $${(producto.precio * producto.cantidad).toFixed(0)}`;
         carritoLista.appendChild(li);
 
         total += producto.precio * producto.cantidad;
     });
 
-    totalElemento.textContent = total.toFixed(2);
+    totalElemento.textContent = total.toFixed(0);
 }
 
 document.querySelectorAll(".add-to-cart-btn").forEach(button => {
