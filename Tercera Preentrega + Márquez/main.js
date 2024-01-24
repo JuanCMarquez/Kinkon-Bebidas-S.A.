@@ -63,9 +63,9 @@ const productos = [
     { nombre: "Vodka Smirnoff", categoria: "vodka", precio: 4000 },
     { nombre: "Vodka Sernova", categoria: "vodka", precio: 3000 },
     { nombre: "Vodka Absolut", categoria: "vodka", precio: 15000 },
-    { nombre: "Gin 1", categoria: "ginebra", precio: 14.99 },
-    { nombre: "Gin 2", categoria: "ginebra", precio: 17.99 },
-    { nombre: "Gin 3", categoria: "ginebra", precio: 21.99 }
+    { nombre: "Gin La llave", categoria: "ginebra", precio: 4500 },
+    { nombre: "Gin Gordon's", categoria: "ginebra", precio: 6000 },
+    { nombre: "Beefeater London Dry", categoria: "ginebra", precio: 15000}
 ];
 
 function buttonClick(button) {
@@ -144,7 +144,6 @@ document.getElementById("boton-pago").addEventListener("click", function () {
             },
             buttonsStyling: false,
             didRender: function () {
-                // Agrega estilos personalizados a los botones
                 document.querySelector('.swal2-confirm').classList.add('custom-confirm-button');
                 document.querySelector('.swal2-cancel').classList.add('custom-cancel-button');
             }
