@@ -140,13 +140,13 @@ nav a:hover {
 
 #contador {
     position: absolute;
-    top: 8px; 
-    right: 17px; 
-    background-color: rgb(177, 35, 212); 
-    color: white; 
-    border-radius: 60%; 
-    padding: 4px 10px; 
-    font-size: 0.8em; 
+    top: 8px;
+    right: 17px;
+    background-color: rgb(177, 35, 212);
+    color: white;
+    border-radius: 60%;
+    padding: 4px 10px;
+    font-size: 0.8em;
 }
 
 
@@ -275,7 +275,11 @@ footer {
 
 .item-heading {
     text-transform: capitalize;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    width: auto;
+    position: relative;
+    text-align: center;
 }
 
 .item-image {
@@ -401,11 +405,11 @@ footer {
     font-size: 2.5em;
 }
 
-@media screen and (max-width: 407px) {
+@media screen and (max-width: 440px) {
     .product-category h2 {
         margin-top: 25px;
         text-align: center;
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 }
 
