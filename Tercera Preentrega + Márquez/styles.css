@@ -130,7 +130,7 @@ nav a:hover {
 
 
 #carritoLink {
-    position: absolute;
+    position: relative;
     display: inline-block;
     top: 29%;
     right: 5%;
@@ -149,6 +149,10 @@ nav a:hover {
     font-size: 0.8em;
 }
 
+#main-nav:checked + label #carritoLink {
+    display: none;
+}
+
 
 #logoMono {
     max-width: 100%;
@@ -164,7 +168,12 @@ nav a:hover {
     background-color: #fff;
     overflow: hidden;
     padding: 0px;
-    margin-top: 0px;
+    margin-top: 1px;
+}
+
+.navegar {
+    margin-top: 30px;
+    padding: 0px;
 }
 
 #bebidas-carousel .carousel-control-prev,
