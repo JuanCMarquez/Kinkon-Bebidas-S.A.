@@ -116,7 +116,7 @@ function actualizarCarrito() {
     totalElemento.textContent = total.toFixed(0);
 }
 
-document.querySelectorAll(".add-to-cart-btn").forEach(boton => {
+document.querySelectorAll(".agregar-al-carrito-btn").forEach(boton => {
     boton.addEventListener("click", function () {
         const nombreProducto = this.dataset.product;
         const producto = productosCargados.find(p => p.nombre === nombreProducto);

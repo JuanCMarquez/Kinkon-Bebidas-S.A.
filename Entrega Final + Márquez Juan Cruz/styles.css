@@ -377,7 +377,7 @@ footer {
     margin-bottom: 1rem;
 }
 
-.add-to-cart-btn {
+.agregar-al-carrito-btn {
     border: none;
     background-color: transparent;
     margin: 0 auto;
@@ -395,12 +395,12 @@ footer {
     transition: all .3s linear;
 }
 
-.add-to-cart-btn:hover {
+.agregar-al-carrito-btn:hover {
     color: #fff;
     background-color: rgb(121, 68, 170);
 }
 
-.clicked {
+.clickeado {
     transform: scale(0.95);
     transition: transform 0.1s;
 }
