@@ -1,0 +1,14 @@
+[
+    { "nombre": "Temple Scottish", "categoria": "cerveza", "precio": 1800 },
+    { "nombre": "Temple Wolf Ipa", "categoria": "cerveza", "precio": 1800 },
+    { "nombre": "Temple Honey", "categoria": "cerveza", "precio": 1800 },
+    { "nombre": "Ballantine's Finest", "categoria": "whisky", "precio": 16000 },
+    { "nombre": "Johnnie Walker Red Label", "categoria": "whisky", "precio": 18000 },
+    { "nombre": "Whisky J&B", "categoria": "whisky", "precio": 9000 },
+    { "nombre": "Vodka Smirnoff", "categoria": "vodka", "precio": 4000 },
+    { "nombre": "Vodka Sernova", "categoria": "vodka", "precio": 3000 },
+    { "nombre": "Vodka Absolut", "categoria": "vodka", "precio": 15000 },
+    { "nombre": "Gin Llave", "categoria": "ginebra", "precio": 4500 },
+    { "nombre": "Gin Gordon's", "categoria": "ginebra", "precio": 6000 },
+    { "nombre": "Beefeater London Dry", "categoria": "ginebra", "precio": 15000 }
+]
