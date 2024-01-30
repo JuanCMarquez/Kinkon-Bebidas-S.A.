@@ -18,10 +18,10 @@
 
             <div class="row justify-content-center">
                 <div class="col-12 col-md-4 col-lg-4 p-3 mx-auto">
-                    <button onclick="confirmAge()" class="btn btn-primary btn-block">Sí, soy mayor de edad</button>
+                    <button onclick="confirmarEdad()" class="btn btn-primary btn-block">Sí, soy mayor de edad</button>
                 </div>
                 <div class="col-12 col-md-4 col-lg-4 p-3 mx-auto">
-                    <button onclick="rejectAge()" class="btn btn-danger btn-block">No soy mayor de edad</button>
+                    <button onclick="rechazarEdad()" class="btn btn-danger btn-block">No soy mayor de edad</button>
                 </div>
             </div>
 
@@ -48,17 +48,17 @@
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadHome()">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="cargarInicio()">Inicio</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Productos
                             </a>
                             <div id="desplegableProductos" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#seccion1" onclick="loadProducts('Cerveza')">Cerveza</a>
-                                <a class="dropdown-item" href="#seccion2" onclick="loadProducts('Whisky')">Whisky</a>
-                                <a class="dropdown-item" href="#seccion3" onclick="loadProducts('Vodka')">Vodka</a>
-                                <a class="dropdown-item" href="#seccion4" onclick="loadProducts('Ginebra')">Ginebra</a>
+                                <a class="dropdown-item" href="#seccion1" onclick="cargarProductos('Cerveza')">Cerveza</a>
+                                <a class="dropdown-item" href="#seccion2" onclick="cargarProductos('Whisky')">Whisky</a>
+                                <a class="dropdown-item" href="#seccion3" onclick="cargarProductos('Vodka')">Vodka</a>
+                                <a class="dropdown-item" href="#seccion4" onclick="cargarProductos('Ginebra')">Ginebra</a>
                             </div>
                         </li>
                     </ul>
@@ -127,7 +127,7 @@
                         </ul>
                         <p class="item-price">$1800 </p>
                         <button class="add-to-cart-btn" data-product="Temple Scottish"
-                            onclick="buttonClick(this)">Agregar al
+                            onclick="clickBoton(this)">Agregar al
                             carrito</button>
                     </div>
 
@@ -154,7 +154,7 @@
                         </ul>
                         <p class="item-price">$1800</p>
                         <button class="add-to-cart-btn" data-product="Temple Wolf Ipa"
-                            onclick="buttonClick(this)">Agregar al
+                            onclick="clickBoton(this)">Agregar al
                             carrito</button>
                     </div>
 
@@ -179,7 +179,7 @@
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </ul>
                         <p class="item-price">$1800</p>
-                        <button class="add-to-cart-btn" data-product="Temple Honey" onclick="buttonClick(this)">Agregar
+                        <button class="add-to-cart-btn" data-product="Temple Honey" onclick="clickBoton(this)">Agregar
                             al
                             carrito</button>
                     </div>
@@ -214,7 +214,7 @@
                         </ul>
                         <p class="item-price">$16000</p>
                         <button class="add-to-cart-btn" data-product="Ballantine's Finest"
-                            onclick="buttonClick(this)">Agregar al
+                            onclick="clickBoton(this)">Agregar al
                             carrito</button>
                     </div>
 
@@ -242,7 +242,7 @@
                         </ul>
                         <p class="item-price">$18000</p>
                         <button class="add-to-cart-btn" data-product="Johnnie Walker Red Label"
-                            onclick="buttonClick(this)">Agregar al
+                            onclick="clickBoton(this)">Agregar al
                             carrito</button>
                     </div>
 
@@ -267,7 +267,7 @@
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </ul>
                         <p class="item-price">$9000</p>
-                        <button class="add-to-cart-btn" data-product="Whisky J&B" onclick="buttonClick(this)">Agregar
+                        <button class="add-to-cart-btn" data-product="Whisky J&B" onclick="clickBoton(this)">Agregar
                             al
                             carrito</button>
                     </div>
@@ -301,7 +301,7 @@
                         </ul>
                         <p class="item-price">$4000</p>
                         <button class="add-to-cart-btn" data-product="Vodka Smirnoff"
-                            onclick="buttonClick(this)">Agregar al
+                            onclick="clickBoton(this)">Agregar al
                             carrito</button>
                     </div>
 
@@ -328,7 +328,7 @@
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </ul>
                         <p class="item-price">$3000</p>
-                        <button class="add-to-cart-btn" data-product="Vodka Sernova" onclick="buttonClick(this)">Agregar
+                        <button class="add-to-cart-btn" data-product="Vodka Sernova" onclick="clickBoton(this)">Agregar
                             al
                             carrito</button>
                     </div>
@@ -355,7 +355,7 @@
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </ul>
                         <p class="item-price">$15000</p>
-                        <button class="add-to-cart-btn" data-product="Vodka Absolut" onclick="buttonClick(this)">Agregar
+                        <button class="add-to-cart-btn" data-product="Vodka Absolut" onclick="clickBoton(this)">Agregar
                             al
                             carrito</button>
                     </div>
@@ -388,7 +388,7 @@
                         </ul>
                         <p class="item-price">$4500</p>
                         <button class="add-to-cart-btn" data-product="Gin La llave"
-                            onclick="buttonClick(this)">Agregar al
+                            onclick="clickBoton(this)">Agregar al
                             carrito</button>
                     </div>
 
@@ -415,7 +415,7 @@
                         </ul>
                         <p class="item-price">$6000</p>
                         <button class="add-to-cart-btn" data-product="Gin Gordon's"
-                            onclick="buttonClick(this)">Agregar al
+                            onclick="clickBoton(this)">Agregar al
                             carrito</button>
                     </div>
 
@@ -440,7 +440,7 @@
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </ul>
                         <p class="item-price">$15000 </p>
-                        <button class="add-to-cart-btn" data-product="Beefeater London Dry" onclick="buttonClick(this)">Agregar
+                        <button class="add-to-cart-btn" data-product="Beefeater London Dry" onclick="clickBoton(this)">Agregar
                             al
                             carrito</button>
                     </div>

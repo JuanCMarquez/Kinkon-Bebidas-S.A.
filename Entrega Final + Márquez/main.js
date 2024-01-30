@@ -135,6 +135,11 @@ function resetearContador() {
     }
 }
 
+function playAudio() {
+    let audio = document.getElementById('sonidoMono');
+    audio.play();
+}
+
 document.getElementById("boton-pago").addEventListener("click", function () {
     if (carrito.length !== 0) {
         const swalWithBootstrapButtons = Swal.mixin({

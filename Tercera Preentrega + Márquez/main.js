@@ -1,51 +1,51 @@
-function rejectAge() {
-    exitProgram();
+function rechazarEdad() {
+    salirPrograma();
 }
 
-function exitProgram() {
+function salirPrograma() {
     window.location.href = 'https://www.google.com';
 }
 
-function playAudio() {
+function reproducirAudio() {
     let audio = document.getElementById('sonidoMono');
     audio.play();
 }
 
-function confirmAge() {
-    playAudio();
+function confirmarEdad() {
+    reproducirAudio();
 
-    let ageVerificationSection = document.getElementById('age-verification');
-    ageVerificationSection.style.display = 'none';
-    let navCarouselContainer = document.getElementById('nav-carousel-container');
-    let verifiedContent = document.getElementById('age-verified-content');
-    let footer = document.getElementById('footer');
+    let seccionVerificacionEdad = document.getElementById('age-verification');
+    seccionVerificacionEdad.style.display = 'none';
+    let contenedorCarruselNav = document.getElementById('nav-carousel-container');
+    let contenidoVerificado = document.getElementById('age-verified-content');
+    let piePagina = document.getElementById('footer');
 
-    navCarouselContainer.style.display = 'block';
-    verifiedContent.style.display = 'block';
-    footer.style.display = 'block';
+    contenedorCarruselNav.style.display = 'block';
+    contenidoVerificado.style.display = 'block';
+    piePagina.style.display = 'block';
 
-    localStorage.setItem("isAdult", "true");
+    localStorage.setItem("esAdulto", "true");
 
     window.scrollTo(0, 0);
 }
 
-function loadHome() {
+function cargarInicio() {
     document.getElementById("content").innerHTML;
 }
 
-function loadProducts() {
+function cargarProductos() {
     document.getElementById("content").innerHTML;
 }
 
-function loadCart() {
+function cargarCarrito() {
     document.getElementById("content").innerHTML;
 }
 
 window.onload = function () {
-    const isAdult = localStorage.getItem("isAdult");
+    const esAdulto = localStorage.getItem("esAdulto");
 
-    if (isAdult === "true") {
-        loadHome();
+    if (esAdulto === "true") {
+        cargarInicio();
         document.getElementById("nav-carousel-container").style.display = "block";
         document.getElementById('footer').style.display = 'block'; // Agrega esta línea
     } else {
@@ -65,13 +65,13 @@ const productos = [
     { nombre: "Vodka Absolut", categoria: "vodka", precio: 15000 },
     { nombre: "Gin La llave", categoria: "ginebra", precio: 4500 },
     { nombre: "Gin Gordon's", categoria: "ginebra", precio: 6000 },
-    { nombre: "Beefeater London Dry", categoria: "ginebra", precio: 15000}
+    { nombre: "Beefeater London Dry", categoria: "ginebra", precio: 15000 }
 ];
 
-function buttonClick(button) {
-    $(button).addClass('clicked');
+function clickBoton(boton) {
+    $(boton).addClass('clickeado');
     setTimeout(function () {
-        $(button).removeClass('clicked');
+        $(boton).removeClass('clickeado');
     }, 100);
 }
 
@@ -116,8 +116,8 @@ function actualizarCarrito() {
     totalElemento.textContent = total.toFixed(0);
 }
 
-document.querySelectorAll(".add-to-cart-btn").forEach(button => {
-    button.addEventListener("click", function () {
+document.querySelectorAll(".add-to-cart-btn").forEach(boton => {
+    boton.addEventListener("click", function () {
         const nombreProducto = this.dataset.product;
         const producto = productos.find(p => p.nombre === nombreProducto);
 
@@ -133,6 +133,11 @@ function resetearContador() {
     if (contadorElemento) {
         contadorElemento.textContent = contador;
     }
+}
+
+function sonidoVenta() {
+    let audio = new Audio('./assets/sounds/sonidoVenta.mp3');
+    audio.play();
 }
 
 document.getElementById("boton-pago").addEventListener("click", function () {
@@ -192,6 +197,7 @@ document.getElementById("boton-pago").addEventListener("click", function () {
                             icon: "success",
                         });
                         resetearContador();
+                        sonidoVenta();
                     }
                 });
 
